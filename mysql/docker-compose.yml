@@ -1,0 +1,12 @@
+version: "3"
+services:
+  backup_mysql:
+    container_name: backup_mysql
+    hostname: backup_mysql
+    restart: "no"
+    image: backup_mysql
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    env_file:
+      - ".env"

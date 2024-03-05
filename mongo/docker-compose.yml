@@ -1,0 +1,12 @@
+version: "3"
+services:
+  backup_mongodb:
+    container_name: backup_mongodb
+    hostname: backup_mongodb
+    restart: "no"
+    image: backup_mongodb
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    env_file:
+      - ".env"
